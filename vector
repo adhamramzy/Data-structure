@@ -1,0 +1,42 @@
+#include <iostream>
+#include <vector>  // Include the vector header
+
+using namespace std;
+
+int main() {
+    vector<int> myVector;  // Create an empty vector of integers
+
+    // Add elements to the vector
+    myVector.push_back(10);
+    myVector.push_back(20);
+    myVector.push_back(30);
+
+    cout << "Original vector: ";
+    // Access and print elements using a range-based for loop
+    for (int num : myVector) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    // Change the second element
+    myVector[1] = 40;
+
+    cout << "Modified vector: ";
+    // Print elements using an iterator-based for loop
+    for (auto it = myVector.begin(); it != myVector.end(); ++it) {
+        cout << *it << " ";
+    }
+    cout << endl;
+
+    // Remove the last element
+    myVector.pop_back();
+
+    cout << "Vector after removing last element: ";
+    // Print elements using the at() method
+    for (int i = 0; i < myVector.size(); ++i) {
+        cout << myVector.at(i) << " ";
+    }
+    cout << endl;
+
+    return 0;
+}

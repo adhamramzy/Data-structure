@@ -1,0 +1,32 @@
+#include <iostream>
+#include <queue>  // Include the queue header
+
+using namespace std;
+
+int main() {
+    queue<int> myQueue;  // Create a queue of integers
+
+    // Push elements onto the queue
+    myQueue.push(10);
+    myQueue.push(20);
+    myQueue.push(30);
+
+    cout << "Queue elements: ";
+
+    // Use a loop to print all elements (FIFO order)
+    while (!myQueue.empty()) {
+        cout << myQueue.front() << " ";
+        myQueue.pop(); // Remove the front element after printing
+    }
+    cout << endl;
+
+    // Additional operations
+    cout << "Is queue empty? " << (myQueue.empty() ? "Yes" : "No") << endl;
+
+    myQueue.push(40); // Add a new element
+    cout << "Front element: " << myQueue.front() << endl;
+    cout << "Back element: " << myQueue.back() << endl;
+    cout << "Queue size: " << myQueue.size() << endl;
+
+    return 0;
+}
